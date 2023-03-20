@@ -22,9 +22,12 @@ namespace SkipTimeCapsule
         {
             if (__instance != null)
             {
-                if (__instance.transform.parent.gameObject.name == "Event" && __instance.transform.parent.transform.Find("ZaoOpening") != null)
+                if (__instance.transform.parent.gameObject != null)
                 {
-                    __instance.currentEvent = 21;
+                    if (__instance.transform.parent.gameObject.name == "Event" && __instance.transform.parent.transform.Find("ZaoOpening") != null)
+                    {
+                        __instance.currentEvent = 21;
+                    }
                 }
             }
         }
